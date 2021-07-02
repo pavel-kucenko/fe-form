@@ -24,12 +24,14 @@
             type="text"
             name="first name"
             placeholder="First Name"
+            required            
           />
           <input
             class="reg-form-input name"
             type="text"
             name="last name"
             placeholder="Last Name"
+            required            
           />
 
           <input
@@ -37,6 +39,8 @@
             type="email"
             name="email"
             placeholder="Email"
+            required
+            pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+"
           />
 
           <input
@@ -44,6 +48,8 @@
             type="password"
             name="password"
             placeholder="Password"
+            required
+            pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$"
           />
 
           <input
@@ -51,9 +57,20 @@
             type="password"
             name="confirm password"
             placeholder="Confirm Password"
+            required
           />
 
-          <input class="reg-form-checkbox" type="checkbox" name="accept" />
+          <label class="input-checkbox-label">
+            <input
+              class="checkbox"
+              type="checkbox"
+              name="accept"
+              value="accept"
+              required
+            />
+            I accept the <a href="#">Terms of Use</a> &
+            <a href="#">Privacy Policy.</a>
+          </label>
 
           <button class="reg-form-btn" type="submit">Register Now</button>
         </div>
